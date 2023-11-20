@@ -91,22 +91,34 @@
                 <img class="img-fluid hero-img" src="image/image8.png" alt="">
             </section>
             <div class="text-center" style="color: #F37124;">
-                <h3><i>Your Appointment with BHE UNI is Confirmed!</i> </h3>
+                <h2>Congratulations!</h2>
             </div>
             <section class="main-body">
-                <p><b>Dear Tanvir,</b></p>
-                <p>We are thrilled to inform you that your appointment with BHE UNI is now confirmed! 🎉</p>
-                    
-                <p><b>Appointment Details:</b></p>
-                <p> Date: 12th October 2023 <br>
-                    Time: 10.00am (GMT+6) <br>
-                    Location: Dhaka Office <br>
-                    Service/Consultation: Study Abroad</p>
-                </p> 
-                <div class="text-center py-3">
-                    <a class="btn" href="">Go to Dashboard</a>
+                <p><b>Dear {{ $details['name'] }},</b></p>
+                <p>We are giving you a mail to confirm you as a valuable agent to our company.<br><br> We also create your login creditionals and save your information. 🎉</p>
+                <p><b>Creditionals  Details:</b></p>
+                <p>CRM Login URL is: <a href="{{ $details['settings']->website.'/staff-login' }}" style="color: #283ccd; font-weight: 400;text-decoration: none;">{{ $details['settings']->website.'/staff-login' }}</a>
+                    <br>
+                </p>
+                <p>Your Registered Email is: <span style="color: #283ccd; font-weight: 400;">{{ $details['user_email'] }}</span>
+                    <br>
+                </p>
+                <p>Your temporary password is: <span style="color: #283ccd; font-weight: 400;">{{ $details['password'] }}</span>
+                    <br>
+                </p>
+                <p style="color: #d6133d; font-weight: 400; text-align: center; padding-top: 15px;">
+                    You can change this password after login.
+                    <br><br>
+                </p>
+                <div class="text-center pb-3">
+                    <a class="btn" href="">Go to Agent Portal</a>
                 </div> 
-                <p>We can't wait to provide you with our expert services and ensure your experience is outstanding. At BHE UNI, we are committed to delivering top-notch quality, and we're excited to have you as our valued customer.</p>
+                <p style="line-height: 24px; margin-bottom:20px;">
+                    Please contact with us to this <span style="color: #283ccd; font-weight: 400;">{{ $details['email'] }}</span> mail I would be ready to give necessary assistance.
+                </p>
+                <p style="line-height: 24px; margin-bottom:20px; font-weight: 400;">
+                    I look forward to join is our new member.
+                </p>
             </section>
             <section class="main-body">
                 <p><b>Best regards,</b> <br>
